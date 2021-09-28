@@ -1,0 +1,5 @@
+.phpunit.cache
+.php-cs-fixer.cache
+.vagrant
+.idea
+vendor/

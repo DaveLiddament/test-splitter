@@ -1,0 +1,47 @@
+{
+  "name": "dave-liddament/test-splitter",
+  "description": "Splits up PHPUnit tests so they can be ran in parallel (e.g. on github actions)",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "vimeo/psalm": "^4.10",
+    "psalm/plugin-phpunit": "^0.16.1",
+    "php-parallel-lint/php-parallel-lint": "^1.3",
+    "friendsofphp/php-cs-fixer": "^3.1"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "DaveLiddament\\TestSplitter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DaveLiddament\\TestSplitter\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Dave Liddament",
+      "email": "dave@lampbristol.com"
+    }
+  ],
+  "bin": [
+    "tsplit"
+  ],
+  "scripts": {
+    "ci" : [
+      "@composer-validate",
+      "@cs",
+      "@lint",
+      "@test",
+      "@psalm"
+    ],
+    "composer-validate" : "@composer validate --no-check-all --strict",
+    "lint" : "parallel-lint src tests",
+    "cs" : "php-cs-fixer fix -v --dry-run",
+    "cs-fix" : "php-cs-fixer fix -v",
+    "psalm" : "psalm --shepherd",
+    "test" : "phpunit"
+  }
+}

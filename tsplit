@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use DaveLiddament\TestSplitter\CliArgumentParser;
+use DaveLiddament\TestSplitter\InvalidArgumentsException;
+use DaveLiddament\TestSplitter\TestClassSplitter;
+use DaveLiddament\TestSplitter\TestNameExtractor;
+
+
+require __DIR__ . "/vendor/autoload.php";
+
+try {
+    $cliArgumentParser = new CliArgumentParser($argv);
+} catch (InvalidArgumentsException $e) {
+    printf("\n\nError: %s\n\n Usage: %s <set> <of>\n\n", $e->getMessage(), $argv[0]);
+    die(1);
+}
+
+$stdIn = stream_get_contents(STDIN);
+
+$testNameExtractor = new TestNameExtractor();
+
+$testClassSplitter = new TestClassSplitter($testNameExtractor->getDeDupedTestClassNames($stdIn));
+
+$output = join('|', $testClassSplitter->getTestCaseNames($cliArgumentParser->getNumerator(), $cliArgumentParser->getDenominator()));
+
+echo $output;
