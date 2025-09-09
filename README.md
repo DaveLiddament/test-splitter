@@ -8,39 +8,39 @@
 [![Continuous Integration](https://github.com/DaveLiddament/test-splitter/workflows/Checks/badge.svg)](https://github.com/DaveLiddament/test-splitter/actions)
 [![Psalm level 1](https://img.shields.io/badge/Psalm-%20level%201-brightgreen.svg)](https://github.com/DaveLiddament/test-splitter/blob/master/psalm.xml)
 
+Have you got a slow running test suite?
+Are existing test parallelisation tools (e.g. [paratest](https://github.com/paratestphp/paratest)) not suitable as you need separate database instances?
 
-
-Have you got a slow running test suite? Are existing test parallelisation tools (e.g. [paratest](https://github.com/paratestphp/paratest)) not suitable as you need separate database instances?
-
-If so PHPUnit test case splitter might help. This splits tests into batches in a deterministic way. Each batch of tests can run in separate instances (e.g. by using a matrix in github actions).
+If so, PHPUnit test case splitter might help.
+It splits tests into batches in a deterministic way.
+Each batch of tests can run in separate instances (e.g. by using a matrix in GitHub actions).
 
 ## Usage
 
-To use. Install:
+Install via [Composer](https://getcomposer.org):
 
 ```bash
 composer require --dev dave-liddament/test-splitter
 ```
 
-Test splitter (`tsplit`) takes two arguments: batch, and number of batches. The list of tests is piped into `stdin`.
+This package provides an executable under `vendor/bin/tsplit` that takes two arguments: batch, and number of batches.
+It accepts a list of tests piped into `stdin` and outputs the tests for the specified batch to `stdout`.
 
 To split the tests into 4 batches and run the first batch you can do:
 
-```
+```bash
 vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit 1 4`
 ```
 
-To run the second batch you'd use:
+To run the second batch out of 4 you'd use:
 
-
-```
+```bash
 vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit 2 4`
 ```
 
+## GitHub actions
 
-## Github actions
-
-Add this to your github actions:
+Add this to your GitHub actions:
 
 ```yaml
 jobs:
@@ -52,7 +52,7 @@ jobs:
         test-batch: [1, 2, 3, 4]
 
     steps: 
-      # Steps to checkout code, setup environment, etc
+      # Steps to checkout code, setup environment, etc.
 
       - name: "Tests batch ${{ matrix.test--batch }}"
         run: vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit ${{ matrix.test-batch }} 4`

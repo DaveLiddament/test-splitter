@@ -26,7 +26,7 @@ final class CliArgumentParser
         $this->denominator = $this->asInt($args[2]);
 
         if ($this->numerator > $this->denominator) {
-            throw new InvalidArgumentsException("Numerator must be less than Demoninator ({$this->denominator})");
+            throw new InvalidArgumentsException("Numerator {$this->numerator} must be less than Denominator {$this->denominator}");
         }
     }
 
