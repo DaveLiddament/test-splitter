@@ -41,6 +41,11 @@ $testNameExtractor = new TestNameExtractor();
 
 $testClassSplitter = new TestClassSplitter($testNameExtractor->getDeDupedTestClassNames($stdIn));
 
-$output = join('|', $testClassSplitter->getTestCaseNames($cliArgumentParser->getNumerator(), $cliArgumentParser->getDenominator()));
+$testCaseNames = $testClassSplitter->getTestCaseNames($cliArgumentParser->getNumerator(), $cliArgumentParser->getDenominator());
+$escapedTestCaseNames = array_map(function (string $testCaseName): string {
+    return str_replace('\\', '\\\\', $testCaseName);
+}, $testCaseNames);
+
+$output = join('|', $escapedTestCaseNames);
 
 echo $output;
