@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DaveLiddament\TestSplitter;
 
-class TestNameExtractor
+final class TestNameExtractor
 {
     /**
      * @return array<int,string>

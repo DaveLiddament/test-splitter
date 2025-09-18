@@ -7,7 +7,7 @@ namespace DaveLiddament\TestSplitter\Tests;
 use DaveLiddament\TestSplitter\TestNameExtractor;
 use PHPUnit\Framework\TestCase;
 
-class TestNameExtractorTest extends TestCase
+final class TestNameExtractorTest extends TestCase
 {
     private const DUPLICATE_TEST = <<<EOL
 - DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\SarbJsonResultsParser\SarbJsonResultsParserTest::testIdentifier

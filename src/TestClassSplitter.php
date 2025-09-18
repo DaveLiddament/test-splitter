@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DaveLiddament\TestSplitter;
 
-class TestClassSplitter
+final class TestClassSplitter
 {
     /**
      * @var array<int,string>
