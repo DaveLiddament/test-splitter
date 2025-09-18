@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DaveLiddament\TestSplitter;
 
-class CliArgumentParser
+final class CliArgumentParser
 {
     /**
      * @var int

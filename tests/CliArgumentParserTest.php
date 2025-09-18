@@ -8,7 +8,7 @@ use DaveLiddament\TestSplitter\CliArgumentParser;
 use DaveLiddament\TestSplitter\InvalidArgumentsException;
 use PHPUnit\Framework\TestCase;
 
-class CliArgumentParserTest extends TestCase
+final class CliArgumentParserTest extends TestCase
 {
     private const SCRIPT_NAME = 'tsplit';
 

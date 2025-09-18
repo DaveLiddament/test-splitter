@@ -49,3 +49,8 @@ jobs:
 ```
 
 This will split the tests over 4 different jobs.
+
+## Additional documentation
+
+- [Code of Conduct](docs/CodeOfConduct.md)
+- [Contributing](docs/Contributing.md)

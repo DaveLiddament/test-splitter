@@ -7,7 +7,7 @@ namespace DaveLiddament\TestSplitter\Tests;
 use DaveLiddament\TestSplitter\TestClassSplitter;
 use PHPUnit\Framework\TestCase;
 
-class TestCaseSplitterTest extends TestCase
+final class TestCaseSplitterTest extends TestCase
 {
     private const ONE = 'A';
     private const TWO = 'B';
