@@ -8,7 +8,6 @@ use DaveLiddament\TestSplitter\InvalidArgumentsException;
 use DaveLiddament\TestSplitter\TestClassSplitter;
 use DaveLiddament\TestSplitter\TestNameExtractor;
 
-
 function loadAutoloader(): void
 {
     $autoloaderLocations = [
@@ -16,14 +15,14 @@ function loadAutoloader(): void
         __DIR__ . '/../../autoload.php',
     ];
 
-    foreach($autoloaderLocations as $autoloaderLocation) {
+    foreach ($autoloaderLocations as $autoloaderLocation) {
         if (file_exists($autoloaderLocation)) {
             require($autoloaderLocation);
             return;
         }
     }
 
-    die("Can not find autoloader");
+    die('Can not find autoloader');
 }
 
 loadAutoloader();
