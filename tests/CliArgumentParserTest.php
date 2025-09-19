@@ -13,7 +13,7 @@ final class CliArgumentParserTest extends TestCase
     private const SCRIPT_NAME = 'tsplit';
 
     /** @return array<string,array{array<int,string>}> */
-    public function invalidArgumentsDataProvider(): array
+    public static function invalidArgumentsDataProvider(): array
     {
         return [
             'none' => [
@@ -113,7 +113,7 @@ final class CliArgumentParserTest extends TestCase
     }
 
     /** @return array<int,array{int, int, array<int,string>}> */
-    public function validArgumentsDataProvider(): array
+    public static function validArgumentsDataProvider(): array
     {
         return [
             [

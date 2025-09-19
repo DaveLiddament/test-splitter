@@ -17,7 +17,7 @@ final class TestCaseSplitterTest extends TestCase
     private const SIX = 'F';
 
     /** @return array<int,array{int, int, array<int,string>}> */
-    public function dataProvider(): array
+    public static function dataProvider(): array
     {
         return [
             [

@@ -28,7 +28,7 @@ Available test(s):
 EOL;
 
     /** @return array<int,array{string,array<int,string>}> */
-    public function dataProvider(): array
+    public static function dataProvider(): array
     {
         return [
             [
