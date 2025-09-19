@@ -19,7 +19,7 @@ Each batch of tests can run in separate instances (e.g. by using a matrix in Git
 
 Install via [Composer](https://getcomposer.org):
 
-```bash
+```shell
 composer require --dev dave-liddament/test-splitter
 ```
 
@@ -28,13 +28,13 @@ It accepts a list of tests piped into `stdin` and outputs the tests for the spec
 
 To split the tests into 4 batches and run the first batch you can do:
 
-```bash
+```shell
 vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit 1 4`
 ```
 
 To run the second batch out of 4 you'd use:
 
-```bash
+```shell
 vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit 2 4`
 ```
 
