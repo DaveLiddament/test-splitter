@@ -36,13 +36,7 @@ docker compose build
 
 ### Run composer scripts
 
-Start the services 
-
-```shell
-docker compose up --detach
-```
-
-You can run composer scripts in any supported PHP version through Docker.
+You can run composer scripts in any supported PHP version through Docker:
 
 ```shell
 docker compose run --rm php<version> composer <script> 
