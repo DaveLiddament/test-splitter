@@ -26,12 +26,12 @@ composer ci
 
 [Dockerfile](/Dockerfile) and [docker-compose.yml](/docker-compose.yml) have been provided to help with development. 
 
-### Build
+### Install dependencies
 
-Build the Docker images:
+Run the following to install dependencies in the PHP version of your choice (e.g. 8.4):
 
 ```shell
-docker compose build
+docker compose run --rm php84 composer install
 ```
 
 ### Run composer scripts
@@ -45,7 +45,7 @@ docker compose run --rm php<version> composer <script>
 For example, to run `cs-fix` on PHP 8.2:
 
 ```shell
-docker compose run --rm php82 composer cs-fix 
+docker compose run --rm php82 composer cs-fix
 ```
 
 See [composer.json](/composer.json) section `scripts` for all available scripts.
