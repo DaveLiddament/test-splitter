@@ -5,7 +5,8 @@ services:
         PHP_VERSION: ""
     tty: true
     volumes:
-      - .:/app/:delegated
+      - .:/app:delegated
+    networks: []
   php81:
     build:
       args:
