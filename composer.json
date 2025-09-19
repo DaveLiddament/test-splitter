@@ -42,8 +42,8 @@
     ],
     "composer-validate" : "@composer validate --no-check-all --strict",
     "lint" : "parallel-lint src tests",
-    "cs" : "php-cs-fixer fix -v --dry-run",
-    "cs-fix" : "php-cs-fixer fix -v",
+    "cs" : "php-cs-fixer fix --verbose --dry-run",
+    "cs-fix" : "php-cs-fixer fix --verbose",
     "psalm" : "psalm --shepherd",
     "test" : "phpunit"
   }
