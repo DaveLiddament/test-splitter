@@ -13,12 +13,12 @@ final class TestNameExtractor
     {
         $testNames = [];
         foreach (explode(\PHP_EOL, $input) as $line) {
-            $lastSlashPosition = strrpos($line, '\\');
-            if (false === $lastSlashPosition) {
+            $listPosition = strpos($line, '- ');
+            if (false === $listPosition) {
                 continue;
             }
 
-            $testCase = substr($line, $lastSlashPosition + 1);
+            $testCase = substr($line, $listPosition + 2);
 
             $firstColonPosition = strrpos($testCase, '::');
             if (false === $firstColonPosition) {

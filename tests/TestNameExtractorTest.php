@@ -34,22 +34,22 @@ EOL;
             [
                 self::MANY_TESTS,
                 [
-                    'PhpmdJsonResultsParserTest',
-                    'PhpstanJsonResultsParserTest',
-                    'PsalmJsonResultsParserTest',
-                    'SarbJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\PhpmdJsonResultsParser\PhpmdJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\PhpstanJsonResultsParser\PhpstanJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\PsalmJsonResultsParser\PsalmJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\SarbJsonResultsParser\SarbJsonResultsParserTest',
                 ],
             ],
             [
                 " - DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\SarbJsonResultsParser\SarbJsonResultsParserTest::testConversion",
                 [
-                    'SarbJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\SarbJsonResultsParser\SarbJsonResultsParserTest',
                 ],
             ],
             [
                 self::DUPLICATE_TEST,
                 [
-                    'SarbJsonResultsParserTest',
+                    'DaveLiddament\StaticAnalysisResultsBaseliner\Tests\Unit\Plugins\ResultsParsers\SarbJsonResultsParser\SarbJsonResultsParserTest',
                 ],
             ],
         ];
