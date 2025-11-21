@@ -14,7 +14,7 @@ rm -rf /var/lib/apt/lists/*
 EOF
 
 # Install Xdebug
-ARG XDEBUG_ENABLED=1
+ARG XDEBUG_ENABLED
 RUN <<EOF
 if [ $XDEBUG_ENABLED -eq 1 ]; then
     pecl install xdebug

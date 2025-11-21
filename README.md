@@ -1,6 +1,6 @@
 # PHPUnit test case splitter
 
-[![PHP versions: 8.1|8.2|8.3|8.4](https://img.shields.io/badge/php-8.1|8.2|8.3|8.4-blue.svg)](https://packagist.org/packages/dave-liddament/test-splitter)
+[![PHP versions: 8.1|8.2|8.3|8.4|8.5](https://img.shields.io/badge/php-8.1|8.2|8.3|8.4|8.5-blue.svg)](https://packagist.org/packages/dave-liddament/test-splitter)
 [![Latest Stable Version](https://poser.pugx.org/dave-liddament/test-splitter/v/stable)](https://packagist.org/packages/dave-liddament/test-splitter)
 [![License](https://poser.pugx.org/dave-liddament/test-splitter/license)](https://github.com/DaveLiddament/test-splitter/blob/master/LICENSE.md)
 [![Total Downloads](https://poser.pugx.org/dave-liddament/test-splitter/downloads)](https://packagist.org/packages/dave-liddament/test-splitter/stats)

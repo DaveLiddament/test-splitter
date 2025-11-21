@@ -32,3 +32,10 @@ services:
         XDEBUG_ENABLED: 0
     extends:
       service: latest
+  php85:
+    build:
+      args:
+        PHP_VERSION: "8.5-"
+        XDEBUG_ENABLED: 0
+    extends:
+      service: latest
