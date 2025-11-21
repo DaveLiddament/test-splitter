@@ -6,6 +6,7 @@ namespace DaveLiddament\TestSplitter\Tests;
 
 use DaveLiddament\TestSplitter\CliArgumentParser;
 use DaveLiddament\TestSplitter\InvalidArgumentsException;
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 final class CliArgumentParserTest extends TestCase
@@ -136,7 +137,7 @@ final class CliArgumentParserTest extends TestCase
     public function testValidArguments(int $expectedNumerator, int $expectedDenominator, array $args): void
     {
         $cliArguments = new CliArgumentParser($args);
-        $this->assertSame($expectedNumerator, $cliArguments->getNumerator());
-        $this->assertSame($expectedDenominator, $cliArguments->getDenominator());
+        Assert::assertSame($expectedNumerator, $cliArguments->getNumerator());
+        Assert::assertSame($expectedDenominator, $cliArguments->getDenominator());
     }
 }

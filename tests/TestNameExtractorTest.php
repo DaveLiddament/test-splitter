@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DaveLiddament\TestSplitter\Tests;
 
 use DaveLiddament\TestSplitter\TestNameExtractor;
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 final class TestNameExtractorTest extends TestCase
@@ -64,7 +65,7 @@ EOL;
     {
         $testNameExtractor = new TestNameExtractor();
         $actual = $testNameExtractor->getDeDupedTestClassNames($input);
-        $this->assertEquals(
+        Assert::assertEquals(
             $expectedTestNames,
             $actual
         );
