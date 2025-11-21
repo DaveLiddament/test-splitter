@@ -27,7 +27,7 @@ final class TestNameExtractor
 
             $testName = substr($testCase, 0, $firstColonPosition);
 
-            if (!in_array($testName, $testNames)) {
+            if (!in_array($testName, $testNames, true)) {
                 $testNames[] = $testName;
             }
         }

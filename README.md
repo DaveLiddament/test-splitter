@@ -6,8 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/dave-liddament/test-splitter/downloads)](https://packagist.org/packages/dave-liddament/test-splitter/stats)
 
 [![Continuous Integration](https://github.com/DaveLiddament/test-splitter/workflows/Checks/badge.svg)](https://github.com/DaveLiddament/test-splitter/actions)
-[![Psalm level 1](https://img.shields.io/badge/Psalm-%20level%201-brightgreen.svg)](https://github.com/DaveLiddament/test-splitter/blob/master/psalm.xml)
-
+[![PHPStan max](https://img.shields.io/badge/PHPStan-max%20level-brightgreen.svg)](https://github.com/DaveLiddament/sarb/blob/master/phpstan.neon)
 Have you got a slow running test suite?
 Are existing test parallelisation tools (e.g. [paratest](https://github.com/paratestphp/paratest)) not suitable as you need separate database instances?
 

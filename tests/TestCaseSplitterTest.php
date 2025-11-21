@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DaveLiddament\TestSplitter\Tests;
 
 use DaveLiddament\TestSplitter\TestClassSplitter;
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 final class TestCaseSplitterTest extends TestCase
@@ -77,6 +78,6 @@ final class TestCaseSplitterTest extends TestCase
 
         $actual = $testCaseSplitter->getTestCaseNames($set, $of);
 
-        $this->assertEquals($expectedTests, $actual);
+        Assert::assertEquals($expectedTests, $actual);
     }
 }
