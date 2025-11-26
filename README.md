@@ -37,7 +37,9 @@ To run the second batch out of 4 you'd use:
 vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit 2 4`
 ```
 
-## GitHub actions
+## CI/CD Usage
+
+### GitHub Actions
 
 Add this to your GitHub actions:
 
@@ -58,6 +60,19 @@ jobs:
 ```
 
 This will split the tests over 4 different jobs.
+
+### GitLab CI/CD
+
+```yaml
+test:
+  stage: test
+  parallel: 4
+  script:
+    - vendor/bin/phpunit --filter `vendor/bin/phpunit --list-tests | vendor/bin/tsplit ${CI_NODE_INDEX} ${CI_NODE_TOTAL}`
+
+```
+
+This will split the tests over 4 different jobs. [GitLabs predefined variables](https://docs.gitlab.com/ci/variables/predefined_variables/) `CI_NODE_INDEX` and `CI_NODE_TOTAL` are used to automatically specify the batch number and total number of batches.
 
 ## Additional documentation
 
