@@ -7,10 +7,11 @@
 
 [![Continuous Integration](https://github.com/DaveLiddament/test-splitter/workflows/Checks/badge.svg)](https://github.com/DaveLiddament/test-splitter/actions)
 [![PHPStan max](https://img.shields.io/badge/PHPStan-max%20level-brightgreen.svg)](https://github.com/DaveLiddament/sarb/blob/master/phpstan.neon)
-Have you got a slow running test suite?
-Are existing test parallelisation tools (e.g. [paratest](https://github.com/paratestphp/paratest)) not suitable as you need separate database instances?
 
-If so, PHPUnit test case splitter might help.
+
+Have you got a slow running PHPUnit test suite?
+
+Do you want to split your tests over separate instances? If so, PHPUnit test case splitter might help.
 It splits tests into batches in a deterministic way.
 Each batch of tests can run in separate instances (e.g. by using a matrix in GitHub actions).
 
@@ -78,3 +79,13 @@ This will split the tests over 4 different jobs. [GitLabs predefined variables](
 
 - [Code of Conduct](docs/CodeOfConduct.md)
 - [Contributing](docs/Contributing.md)
+
+## Alternative tools
+
+Test splitter is a very simple tool. It was created in 2021, at the time no other tools did something similar. 
+It solved a problem I had on a couple of client projects. 
+
+Since 2021 other tools that do similar things have been developed. If you want more mature or more feature rich tools then try these:
+
+- [Paratest](https://github.com/paratestphp/paratest) - You'll need to use the [shard functionality](https://github.com/paratestphp/paratest/pull/1013) introduced in September 2025.
+- [Shipmonk's PHPUnit parallel job balancer](https://github.com/shipmonk-rnd/phpunit-parallel-job-balancer) created in December 2025.
